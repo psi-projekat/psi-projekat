@@ -1,0 +1,165 @@
+{
+  "labels": {
+    "navbar": {
+      "left": {
+        "home": "Home",
+        "sandbox": "Sandbox",
+        "competition": "Competition",
+        "search": "Search",
+        "help": "Help",
+        "language": "Language"
+      },
+      "right": {
+        "register": "Register",
+        "login": "Log In",
+        "profile": "Profile",
+        "logout": "Log Out"
+      }
+    },
+    "forms": {
+      "fields": {
+        "nick": "Username",
+        "email": "Email",
+        "pass": "Password",
+        "pass2": "Confirm password",
+        "captcha": "Enter characters from the picture",
+        "users": "Users",
+        "competitions": "Competitions",
+        "functionalities": "Functionalities",
+        "posts": "Posts",
+        "keywords": "Key words",
+        "postContent": "Post content",
+        "compTitle": "Competition title",
+        "compDesc": "Competition description",
+        "compStartDate": "Start date",
+        "compMaxUsers": "Maximal number of users",
+        "newVal": "New value"
+      },
+      "buttons": {
+        "confirm": "Confirm",
+        "ok": "OK",
+        "search": "Search",
+        "addPost": "Add post",
+        "addComp": "Add competition",
+        "turnIntoMod": "Turn into moderator",
+        "deleteOwnProfile": "Delete your profile",
+        "deleteOtherProfile": "Delete this user's profile"
+      }
+    },
+    "sandbox": {
+      "script": "Script",
+      "input": "Input",
+      "output": "Output",
+      "simulator": "Simulator",
+      "settings": "Settings",
+      "options": {
+        "progLang": "Programming language",
+        "maxSize": "Maximal memory size",
+        "criticalSize": "Critical memory size",
+        "instructionsPerTick": "Instructions per tick"
+      },
+      "buttons": {
+        "exportScript": "Export script"
+      }
+    },
+    "competition": {
+      "startTime": "Start time",
+      "apply": "Apply",
+      "giveUp": "Give up",
+      "msgs": {
+        "applied": "You have successfully applied for the competition",
+        "gaveUp": "You have successfully signed out from the competition"
+      }
+    },
+    "functionality": {
+      "upgrade": "Upgrade",
+      "msgs": {
+        "upgraded": "You have successfully upgraded your functionality"
+      }
+    },
+    "userProfile": {
+      "nick": "Username",
+      "email": "Email",
+      "registrationDate": "Registration date",
+      "points": "Points",
+      "fullName": "Full name",
+      "desc": "Description",
+      "isMod": "Moderator"
+    }
+  },
+  "titles": {
+    "home": "Home",
+    "sandbox": "Sandbox",
+    "competition": "Competition",
+    "search": "Search",
+    "help": "Help",
+    "language": "Language",
+    "register": "Register",
+    "login": "Login",
+    "userProfile": "User profile"
+  },
+  "messages": {
+    "loadingFile": "Loading file..."
+  },
+  "simulator": {
+    "objects": {
+      "dirt": "Dirt",
+      "rock": "Rock",
+      "tree": "Tree",
+      "animal": "Animal",
+      "bot": "Bot",
+      "coin": "Coin"
+    }
+  },
+  "errors": {
+    "error": "Error",
+    "noimpl": "The requested functionality is not implemented",
+    "multipleFiles": "You can select one file at most",
+    "cannotLoadFile": "Unable to load file",
+    "invalidNum": "Invalid number",
+    "tooSmallNum": "The number is too small",
+    "tooBigNum": "The number is too large",
+    "invalidDateFormat": "Date must be in format \"dd.mm.yyyy. hh:mm\"",
+    "multipleBotsInSandbox": "Only one bot is allowed in sandbox",
+    "server": {
+      "status": {
+        "400": "Illegal request",
+        "404": "Page not found",
+        "500": "Error on the server"
+      },
+      "info": {
+        "invalidURL": "Invalid URL",
+        "unknownEntry": "Unknown file system entry type"
+      }
+    },
+    "query": {
+      "passDiff": "Passwords do not match",
+      "invalidNick": "The username must consist of lower Latin letters and optional dashes, must not begin or end with a dash and can not contain two consecutive dashes",
+      "invalidEmail": "Email address is invalid",
+      "invalidPass": "The password must have a minimum of 8 characters and a maximum of 64 characters, only visible ASCII characters, including a blank character, can be used, password must contain at least one uppercase letter and one lowercase letter, as well as a number",
+      "invalidCaptcha": "The characters you entered do not match the image or the image has expired",
+      "nickExists": "The username you entered already exists",
+      "wrongNickOrPass": "Invalid username or password",
+      "notEnoughPoints": "You do not have enough points",
+      "compFull": "The competition is full",
+      "compStartedApply": "You cannot apply for this competitions, because it has already started, or has finished",
+      "compStartedGiveUp": "You cannot sign out from this competitions, because it has already started, or has finished",
+      "alreadyMod": "User is already moderator",
+      "invalidToken": "Invalid token",
+      "invalidImg": "Unknown image format",
+      "invalidScript": "Invalid script format. You must upload the script that you exported from sandbox",
+      "forbidden": "You do not have enough permission to perform the requested action",
+      "data": "Invalid request",
+      "php": "Error on PHP server"
+    }
+  },
+  "succ": {
+    "query": {
+      "register": "You have successfully registered"
+    }
+  },
+  "bool": {
+    "1": "Yes",
+    "0": "No"
+  }
+}

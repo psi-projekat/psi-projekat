@@ -1,0 +1,20 @@
+{
+  "mainScript": "main",
+  "engines": [
+    {
+      "name": "node",
+      "ext": "js"
+    }, {
+      "name": "electron",
+      "script": "electron.js",
+      "options": {
+        "skipFirst": true,
+        "killOnSigint": true,
+        "killCmd": "taskkill /f /im electron.exe"
+      }
+    }, {
+      "name": "python",
+      "ext": "py"
+    }
+  ]
+}

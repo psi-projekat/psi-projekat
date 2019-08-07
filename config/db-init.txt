@@ -1,0 +1,72 @@
+CREATE TABLE User (
+  idUser               INTEGER NOT NULL AUTO_INCREMENT,
+  nick                 VARCHAR(64) NOT NULL,
+  passHash             VARCHAR(1024) NULL,
+  email                VARCHAR(1024) NOT NULL,
+  displayEmail         BIT NOT NULL,
+  isMod                BIT NOT NULL,
+  token                VARCHAR(1024) NULL,
+  registrationDate     BIGINT NOT NULL,
+  points               BIGINT NOT NULL,
+  fullName             VARCHAR(64) NULL,
+  description          TEXT NULL,
+  PRIMARY KEY (idUser)
+);
+
+CREATE TABLE Post (
+  idPost               INTEGER NOT NULL AUTO_INCREMENT,
+  postedBy             INTEGER NOT NULL,
+  content              TEXT NOT NULL,
+  creationDate         BIGINT NOT NULL,
+  PRIMARY KEY (idPost),
+  FOREIGN KEY (postedBy) REFERENCES User (idUser)
+);
+
+CREATE TABLE Goal (
+  idGoal               INTEGER NOT NULL AUTO_INCREMENT,
+  description          TEXT NOT NULL,
+  PRIMARY KEY (idGoal)
+);
+
+CREATE TABLE Competition (
+  idComp               INTEGER NOT NULL AUTO_INCREMENT,
+  createdBy            INTEGER NOT NULL,
+  title                VARCHAR(1024) NOT NULL,
+  description          TEXT NOT NULL,
+  startDate            BIGINT NOT NULL,
+  endDate              BIGINT NOT NULL,
+  idGoal               INTEGER NOT NULL,
+  maxUsers             INTEGER NOT NULL,
+  currentUsers         INTEGER NOT NULL,
+  points               INTEGER NOT NULL,
+  PRIMARY KEY (idComp),
+  FOREIGN KEY (createdBy) REFERENCES User (idUser),
+  FOREIGN KEY (idGoal) REFERENCES Goal (idGoal)
+);
+
+CREATE TABLE Participating (
+  user                 INTEGER NOT NULL,
+  comp                 INTEGER NOT NULL,
+  lang                 VARCHAR(1024) NOT NULL,
+  script               TEXT NOT NULL,
+  applicationDate      BIGINT NOT NULL,
+  PRIMARY KEY (user, comp),
+  FOREIGN KEY (user) REFERENCES User (idUser),
+  FOREIGN KEY (comp) REFERENCES Competition (idComp)
+);
+
+CREATE TABLE Functionality (
+  idFunc               INTEGER NOT NULL AUTO_INCREMENT,
+  name                 VARCHAR(1024) NOT NULL,
+  description          VARCHAR(1024) NULL,
+  points               BIGINT NOT NULL,
+  PRIMARY KEY (idFunc)
+);
+
+CREATE TABLE Upgrade (
+  user               INTEGER NOT NULL,
+  func               INTEGER NOT NULL,
+  PRIMARY KEY (user, func),
+  FOREIGN KEY (user) REFERENCES User (idUser),
+  FOREIGN KEY (func) REFERENCES Functionality (idFunc)
+);

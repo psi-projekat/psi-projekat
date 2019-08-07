@@ -1,0 +1,12 @@
+script{ s0 list s0 }
+
+s{ [ \r\n] }
+s0{ [ \r\n]* }
+s1{ [ \r\n]+ }
+
+list{ chain*listSep }
+listSep{ s0 "," s0 }
+
+chain{ ident s0 arg*s0 }
+arg{ ident | "(" s0 list s0 ")" }
+ident{ [!-'*+\--~]+ }

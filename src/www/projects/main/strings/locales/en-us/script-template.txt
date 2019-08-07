@@ -1,0 +1,42 @@
+0, 1, ==, =, var, [],
+in, out, eof, #,
+
+var(flag, 0),
+
+var(ok, [](a)(==(a, # .null)(0, 1))),
+var(if, [](a, b, c)(ok(a)(b, c)())),
+
+var(loop, []()(
+  var(tile, # .get(# 0, # 0, # 0)),
+  var(coin, tile .get(# "coin")),
+  if(coin, []()(
+    coin .send(# "collect")
+  )),
+
+  var(tile, # .get(# 0, # -1, # -1)),
+  if(tile, []()(
+    if(tile .get(# "ground"), []()(
+      if(# .go(), 0, []()(
+        # .rotate(# 1)
+      ))
+    ), []()(
+      var(dir, flag(# 3, # 1)),
+      # .rotate(dir),
+
+      var(tile, # .get(# 0, # -1, # -1)),
+      if(tile, []()(
+        if(tile .get(# "ground"), []()(
+          if(# .go(), []()(
+            =(flag, flag(0, 1))
+          ))
+        ))
+      )),
+
+      # .rotate(dir)
+    )),
+  ), []()(
+    # .rotate(# 1)
+  )),
+
+  loop()
+))()

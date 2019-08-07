@@ -1,0 +1,11 @@
+script{ [ -~\r\n]* }
+script1{ s0 list s0 }
+
+list{ args? s0 elem+s0 }
+args{ ident+s0 s0 "." }
+elem{ ident | "(" s0 list s0 ")" }
+ident{ [a-zA-Z0-9\-_]+ }
+
+s{ [ \r\n] }
+s0{ [ \r\n]* }
+s1{ [ \r\n]+ }
