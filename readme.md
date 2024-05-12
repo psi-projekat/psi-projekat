@@ -2,8 +2,6 @@
 
 ![](https://api.travis-ci.org/psi-projekat/psi-projekat.svg?branch=master)
 
-![](https://user-images.githubusercontent.com/48075008/58671636-98bbc200-8343-11e9-9f77-2a41eeca25d5.png)
-
 ## Пројекат
 
 Овај репозиторијум представља пројектни задатак из предмета Принципи софтверског инжењерства на Електротехничком факултету Универзитета у Београду. Назив пројекта је *"AI Playground"*. Чланови тима су:
